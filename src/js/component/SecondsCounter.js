@@ -23,6 +23,12 @@ export default function SecondsCounter() {
     }
   }
 
+  const handleReset = ()=> {
+    setCounter(0);
+    setStart(false)
+    setStatus(false)
+  }
+
 
 
   useEffect(()=>{
@@ -50,7 +56,7 @@ export default function SecondsCounter() {
             (<button className="btn btn-danger me-4" onClick={ handleButton} > STOP</button>)
           }
 
-            <button className="btn btn-light text-primary" onClick={() => {setCounter(0)}} > RESET</button>
+            <button className="btn btn-light text-primary" onClick={handleReset} > RESET</button>
           </div>
 
         </div>
